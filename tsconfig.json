@@ -1,10 +1,10 @@
 {
-  "compilerOptions": {  //编译选项
-    "target": "es2015",
+  "compilerOptions": {
+    "target": "es6",
     "module": "commonjs",
     "outDir": "lib"
   },
-  "include": [  //源码位置
+  "include": [
     "src/**/*"
   ]
 }

@@ -1,21 +1,19 @@
 {
   "name": "learning-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "学习 Typescript",
   "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
-    "start": "tsc --watch",
-    "build": "tsc",
+    "node": "node lib/index.js", 
+    "start": "tsc --watch", 
+    "build": "tsc", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YangMMO/typescript_demo.git"
   },
-  "author": "MMOO.FUN",
+  "author": "mmo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/YangMMO/typescript_demo/issues"
