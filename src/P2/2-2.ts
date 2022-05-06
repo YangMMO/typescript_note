@@ -100,3 +100,4 @@ let a22_4: Person22_4 = {
         gender: 'male'
     }
 } 
+

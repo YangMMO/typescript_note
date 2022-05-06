@@ -74,4 +74,35 @@ getName_2409('mmo','123')
 
 /* 箭头函数 */
 
-// 
+// 箭头函数 箭头函数没有this，所以不能被当做构造函数使用
+let getName_2410 = (fristName: string, lastName: string): string => {
+    return fristName + lastName
+}
+
+/* 函数的重载 */
+
+// 错误示例
+function double_2411(x: number | string): number | string {
+    if(typeof x === 'number') {
+        return x * 2
+    } else {
+        return x + "," + x
+    }
+}
+
+double_2411(1).toFixed(2)   //报错，因为私有属性不能被调用
+double_2411('1').length  //报错，因为私有属性不能被调用
+
+// 正确示例 注意：函数重载从上往下匹配，多个函数定义有包含关系，需要把精确的放在最前面
+function double_2412(x: number): number;
+function double_2412(x: string): string;
+function double_2412(x: number | string): number | string {
+    if (typeof x === 'number') {
+        return x * 2
+    } else {
+        return x + "," + x
+    }
+}
+
+double_2412(1).toFixed(2)   //正确
+double_2412('1').length  //正确
