@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "lib": ["es6", "es2017", "scripthost"],
     "module": "commonjs",
     "outDir": "lib",
     "experimentalDecorators": true, // 开启实验性方法
@@ -10,10 +11,14 @@
     "paths": {
       "*": ["types/*"]  // 添加类型声明文件需要的路径
     },
+    "declaration": true, // tsc时 添加类型声明文件
   },
   "include": [
     "src/index.ts",
-    "src/**/*",
-    "typings/**/*"
-  ]
+  ],
+  // "include": [
+  //   "src/index.ts",
+  //   "src/**/*",
+  //   "typings/**/*"
+  // ]
 }

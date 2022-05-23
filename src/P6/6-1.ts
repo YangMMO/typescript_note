@@ -89,3 +89,41 @@ jQuery_6101 //则能读取到function jQuery_6101(): string
 a   //const a: string
 bar() //bar(): string
 abc.foo() //namespace abc / abc.foo(): string
+
+
+
+/* 扩展全局变量的类型 */
+interface String {  //这是后追加的声明，此处需要tsconfig.json es2017
+    prepenHello(): string;
+}
+String.prototype.prepenHello = function () {
+    return 'Hello, ' + this;
+}
+'foo'.prepenHello() // 报错, 因为没有对应的类型声明
+
+
+// 如果上面这个声明是个全局变量，而且如果它是个NPM包，通过export inport是不生效的
+// 此时就需要用到全局变量，才能正确引用到
+
+// 假设有个global.d.ts，interface String 在里面, 则可以正确引用
+String.prototype.prepenHello_6101 = function () {
+    return 'Hello, ' + this;
+}
+'foo'.prepenHello_6101()
+
+
+// 假设在types/foo中，则无法引用
+String.prototype.prepenHello_6102 = function () {
+    return 'Hello, ' + this;
+}
+'foo'.prepenHello_6102()
+
+
+// 假设在types/foo中定义global，则可以正确引用
+String.prototype.prepenHello_6103 = function () {
+    return 'Hello, ' + this;
+}
+'foo'.prepenHello_6103()
+
+
+
