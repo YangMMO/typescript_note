@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "lib": ["es6", "es2017", "scripthost"],
-    "module": "commonjs",
+    "module": "commonjs", // 默认commonjs, esnext为下一代标准
     "outDir": "lib",
     "experimentalDecorators": true, // 开启实验性方法
     "strictPropertyInitialization": false, // 关闭严格属性初始化
