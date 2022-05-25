@@ -12,6 +12,8 @@
       "*": ["types/*"]  // 添加类型声明文件需要的路径
     },
     "declaration": true, // tsc时 添加类型声明文件
+    "sourceMap": true, // 添加sourceMap
+    "strict": false, // 严格模式
   },
   "include": [
     "src/index.ts",
