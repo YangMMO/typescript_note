@@ -17,7 +17,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'awesome-typescript-loader',  // 用于解析typescript文件
       }
     ]
   },

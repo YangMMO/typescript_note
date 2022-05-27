@@ -16,6 +16,7 @@
     "declaration": true, // tsc时 添加类型声明文件
     "sourceMap": true, // 添加sourceMap
     "strict": false, // 严格模式
+    // "jsx": "react", // 开启jsx，同时要开启--allowJs才能编译
   },
   "include": [
     "src/index.ts",
