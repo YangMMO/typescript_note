@@ -1,0 +1,16 @@
+# 指定nodejs语言来进行构建
+language: node_js
+# 使用nodejs版本
+node_js:
+  - 12
+# (only)只在master分支构建
+branches
+  only:
+    - master
+# 构建前执行 npm install
+install:
+  - npm install
+# 最后运行脚本，只有脚本通过之后才构建成功
+script:
+  - npm run build
+  - npm test
