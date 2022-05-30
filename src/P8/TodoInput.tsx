@@ -2,7 +2,7 @@ import * as React from 'react'; // 必须使用 * as 引入
 
 //定义类型
 interface TodoInputProps {
-    color: string;
+    color?: string;
 }
 
 interface TodoInputState {
@@ -10,6 +10,13 @@ interface TodoInputState {
 }
 
 export default class TodoInput extends React.Component<TodoInputProps, TodoInputState> {
+    propTypes   // 用来限制传入的prop类型，缺点：仅支持部分类型，不能再编写时检查报错
+    defaultProp // 用来定义prop参数
+
+    static defaultProps: TodoInputProps = {
+        color: 'blue'   //需将prop设置为可选属性
+    }
+
     // 可以不在构造函数内写state
     public state = {
         value: ''
